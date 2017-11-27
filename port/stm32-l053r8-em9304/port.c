@@ -477,7 +477,7 @@ void port_main(void){
     btstack_run_loop_add_data_source(&transport_data_source);
 
     // init HCI
-    hci_init(hci_transport_h4_instance(btstack_uart_block_embedded_instance()), &config);
+    hci_init(hci_transport_h4_instance(btstack_uart_embedded_instance()), &config);
 
 #if 0
     // setup Link Key DB
