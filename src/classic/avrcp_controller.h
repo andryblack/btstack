@@ -60,7 +60,7 @@ extern "C" {
  * @param service
  * @param service_record_handle
  * @param browsing  1 - supported, 0 - not supported
- * @param supported_features 16-bit bitmap, see AVDTP_SINK_SF_* values in avdtp.h
+ * @param supported_features 16-bit bitmap, see AVRCP_SF_* values in avrcp.h
  * @param service_name
  * @param service_provider_name
  */
