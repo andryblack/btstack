@@ -238,14 +238,14 @@ void btstack_run_loop_embedded_execute_once(void) {
     }
 #endif
     
-    // disable IRQs and check if run loop iteration has been requested. if not, go to sleep
-    hal_cpu_disable_irqs();
-    if (trigger_event_received){
-        trigger_event_received = 0;
-        hal_cpu_enable_irqs();
-    } else {
-        hal_cpu_enable_irqs_and_sleep();
-    }
+    // // disable IRQs and check if run loop iteration has been requested. if not, go to sleep
+    // hal_cpu_disable_irqs();
+    // if (trigger_event_received){
+    //     trigger_event_received = 0;
+    //     hal_cpu_enable_irqs();
+    // } else {
+    //     hal_cpu_enable_irqs_and_sleep();
+    // }
 }
 
 /**
