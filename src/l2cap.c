@@ -1496,6 +1496,13 @@ static void l2cap_run(void){
         }
 
 #ifdef ENABLE_L2CAP_ENHANCED_RETRANSMISSION_MODE
+        switch (channel->state) {
+            case L2CAP_STATE_WAIT_CONNECTION_COMPLETE:
+                continue;
+                break;
+            default:
+                break;
+        }
         // send s-frame to acknowledge received packets
         if (!hci_can_send_acl_packet_now(channel->con_handle)) continue;
 
